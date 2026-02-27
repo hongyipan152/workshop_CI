@@ -118,10 +118,10 @@ permissions:
 # 13. Optional: Deployment Stage
 # Uncomment once students understand environments + secrets.
 # ------------------------------------------------------------
-#   deploy:
-#     needs: build-test
-#     runs-on: ubuntu-latest
-#     environment: production
-#     steps:
-#       # - name: Deploy (placeholder)
-#       #   run: echo "Deploying application..."
+  deploy:
+    needs: build-test
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Deploy (placeholder)
+        run: echo "Deploying application..."
