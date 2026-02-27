@@ -80,8 +80,8 @@ jobs:
 # 9. Static Analysis (Security)
 # Uncomment if ESLint or similar is added to the project.
 # ------------------------------------------------------------
-#       # - name: Lint code
-#       #   run: npm run lint
+      - name: Lint code
+        run: npm run lint
 
 
 # ------------------------------------------------------------
