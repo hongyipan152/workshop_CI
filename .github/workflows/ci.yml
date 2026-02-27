@@ -118,10 +118,20 @@ permissions:
 # 13. Optional: Deployment Stage
 # Uncomment once students understand environments + secrets.
 # ------------------------------------------------------------
-  deploy:
+  # deploy:
+  #   needs: build-test
+  #   runs-on: ubuntu-latest
+  #   environment: production
+  #   steps:
+  #     - name: Deploy (placeholder)
+  #       run: echo "Deploying application..."
+
+deploy:
     needs: build-test
     runs-on: ubuntu-latest
-    environment: production
+    # environment: production  <-- 只要仓库是私有的，就必须注释掉这一行
     steps:
       - name: Deploy (placeholder)
-        run: echo "Deploying application..."
+        run: |
+          echo "Deploying application..."
+          echo "Using API Key: ${{ secrets.API_KEY }}"
